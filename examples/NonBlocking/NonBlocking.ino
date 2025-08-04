@@ -5,26 +5,26 @@ WiFiSetupManager wifiManager;
 void setup()
 {
     Serial.begin(115200);
-    wifiManager.begin(); // Запускаем AP + веб-сервер
+    wifiManager.begin(); // Run the AP + Http server
 }
 
 void loop()
 {
-    // Обрабатываем запросы без блокировки
+    // Handle requests without Blocking
     if (wifiManager.process())
     {
-        // Получена новая конфигурация
+        // received New configuration
         WiFiSetupManager::Config conf = wifiManager.getConfig();
 
         Serial.println("New configuration received:");
         Serial.print("SSID: ");
         Serial.println(conf.SSID);
 
-        // Здесь можно подключиться к WiFi
+        // Connect to WiFi here
         WiFi.begin(conf.SSID, conf.password);
     }
 
-    // Ваш основной код может выполняться здесь
+    // Your primary code can be execute here
     static unsigned long last = 0;
     if (millis() - last > 1000)
     {

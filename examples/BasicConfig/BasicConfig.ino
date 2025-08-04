@@ -10,7 +10,7 @@ void setup()
     // Blocking mode - will wait config from server
     wifiSetup.runBlocking();
 
-    // После выхода из блокирующего режима
+    // After Blocking mode
     Serial.println("WiFi configured!");
     WiFiSetupManager::Config conf = wifiSetup.getConfig();
 
@@ -19,7 +19,7 @@ void setup()
     Serial.print("Password: ");
     Serial.println(conf.password);
 
-    // Подключаемся к WiFi
+    // connect to WiFi
     WiFi.begin(conf.SSID, conf.password);
     while (WiFi.status() != WL_CONNECTED)
     {
