@@ -1,6 +1,6 @@
 # WiFiSetupManager Library for ESP8266
 
-WiFi configuration manager with captive portal for ESP8266. Provides AP mode with web interface for easy WiFi setup. Supports both blocking and non-blocking operation modes. Stores credentials for automatic reconnection. Perfect for IoT devices requiring first-time setup.
+🛜 WiFi configuration manager with captive portal for ESP8266. Provides AP mode with web interface for easy WiFi setup. Supports both blocking and non-blocking operation modes. Stores credentials for automatic reconnection. Perfect for IoT devices requiring first-time setup.
 
 ## Features
 
@@ -22,31 +22,28 @@ WiFi configuration manager with captive portal for ESP8266. Provides AP mode wit
 
 ### Manual Installation
 
-1. **Option A - Using Git**:
+#### Option A - Using Git:
 
-   `bash
+```bash
     cd ~/Documents/Arduino/libraries/ # Default libraries location
     git clone https://github.com/yourusername/ESP8266-WiFiSetupManager.git
-   `
+```
 
-2. **Option B - Download ZIP**:
-      - Download the repository as ZIP
-      - In Arduino IDE: **Sketch** → **Include Library** → **Add .ZIP Library...**
-      - Select the downloaded ZIP file
-3. Restart Arduino IDE to refresh the library list
-4. **Option B - Download ZIP**:
-   - Download the repository as ZIP
-   - In Arduino IDE: **Sketch** → **Include Library** → **Add .ZIP Library...**
-   - Select the downloaded ZIP file
-5. **Option C - Using arduino-cli**
+#### Option B - Download ZIP:
 
-   ```bash
-      # Install the library directly from GitHub
-   arduino-cli lib install --git-url https://github.com/BorisKotlyarov/ESP8266-WiFiSetupManager.git
+   - Download the repository as ZIP
+   - In Arduino IDE: **Sketch** → **Include Library** → **Add .ZIP Library...**
+   - Select the downloaded ZIP file 3. Restart Arduino IDE to refresh the library list 4. **Option B - Download ZIP**:
 
-        # Or install from a ZIP file (after downloading)
-   arduino-cli lib install --zip-path /path/to/ESP8266-WiFiSetupManager.zip
-   ```
+#### Option C - Using arduino-cli
+
+```bash
+  # Install the library directly from GitHub
+arduino-cli lib install --git-url https://github.com/BorisKotlyarov/ESP8266-WiFiSetupManager.git
+
+    # Or install from a ZIP file (after downloading)
+arduino-cli lib install --zip-path /path/to/ESP8266-WiFiSetupManager.zip
+```
 
 6. Restart Arduino IDE to refresh the library list
 
@@ -144,16 +141,6 @@ const Config& getConfig() const;
 | 4    | User exited portal   |
 
 ## Advanced Examples
-
-### Customizing HTML
-
-Modify `connectPage` in the `.cpp` file:
-
-```cpp
-const char WiFiSetupManager::connectPage[] PROGMEM = R"=====(
-/* Your custom HTML here */
-)=====";
-```
 
 ### Persistent Configuration
 
