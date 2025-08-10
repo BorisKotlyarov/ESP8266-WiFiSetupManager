@@ -31,9 +31,9 @@
 
 #### Option B - Download ZIP:
 
-   - Download the repository as ZIP
-   - In Arduino IDE: **Sketch** → **Include Library** → **Add .ZIP Library...**
-   - Select the downloaded ZIP file 3. Restart Arduino IDE to refresh the library list 4. **Option B - Download ZIP**:
+- Download the repository as ZIP
+- In Arduino IDE: **Sketch** → **Include Library** → **Add .ZIP Library...**
+- Select the downloaded ZIP file 3. Restart Arduino IDE to refresh the library list 4. **Option B - Download ZIP**:
 
 #### Option C - Using arduino-cli
 
